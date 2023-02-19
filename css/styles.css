@@ -511,16 +511,20 @@ img {
   background-color: rgba(46, 47, 66, 0.4);
 }
 .backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition-delay: 250ms;
 }
 .modal {
   position: absolute;
-  top: calc(50%-289px)
-  left: calc(50%-204px);
-
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   width: 408px;
   min-height: 576px;
-
 
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -530,12 +534,16 @@ img {
 .modal-btn {
   position: absolute;
   top: 24px;
-  right: 24px;
+  right: 24px; 
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 24px;
   height: 24px;
+  padding: 0;
   background: var(--color-cornflower);
-border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 }
 .modal-icon {
